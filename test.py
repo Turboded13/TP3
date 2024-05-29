@@ -1,9 +1,11 @@
-from main import calculator
+from main import add, subtract
 
-def test1():
-    res = calculator(2,2,'+')
-    assert res == 4
+def test_add():
+    assert add(2, 3) == 5
+    assert add(-1, 1) == 0
+    assert add(0, 0) == 0
 
-def test2():
-    res = calculator(3,1,'-')
-    assert res == 2
+def test_subtract():
+    assert subtract(5, 2) == 3
+    assert subtract(-1, 1) == -2
+    assert subtract(0, 0) == 0
