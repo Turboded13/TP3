@@ -1,13 +1,17 @@
+"""
+@file palindrome.py
+@brief This file contains functions to check if a string is a palindrome.
+"""
+
 def is_palindrome(s):
     """
-    @brief Проверяет, является ли строка палиндромом.
-
-    Палиндром - это строка, которая читается одинаково слева направо и справа налево,
-    если игнорировать пробелы, знаки препинания и регистр букв.
-
-    @param s Входная строка, которую нужно проверить.
-
-    @return True, если строка является палиндромом, иначе False.
+    @brief Checks if the given string is a palindrome.
+    @param s The string to check.
+    @return True if the string is a palindrome, False otherwise.
     """
-    cleaned = ''.join(c.lower() for c in s if c.isalnum())
-    return cleaned == cleaned[::-1]
+    s = s.lower().replace(" ", "")
+    return s == s[::-1]
+
+# Example usage
+if __name__ == "__main__":
+    print(is_palindrome("A man a plan a canal Panama"))  # Output: True
