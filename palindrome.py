@@ -14,4 +14,4 @@ def is_palindrome(s):
 
 # Example usage
 if __name__ == "__main__":
-    print(is_palindrome("A man a plan a canal Panama"))  # Output: True
+print(is_palindrome("A man a plan a canal Panama"))  # Output: True!
