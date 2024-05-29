@@ -1,26 +1,20 @@
 """
 @file main.py
-@brief This file contains functions for basic arithmetic operations.
+@brief This file contains the calculator function which performs basic arithmetic operations.
 """
 
-def add(a, b):
+def calculator(a, b, c):
     """
-    @brief Adds two numbers.
-    @param a First number.
-    @param b Second number.
-    @return Sum of a and b.
+    @brief Performs basic arithmetic operations.
+    @param a First operand.
+    @param b Second operand.
+    @param c Operator (either '+' for addition or '-' for subtraction).
+    @return Result of the arithmetic operation.
     """
-    return a + b
+    if c == '+':
+        return a + b
+    if c == '-':
+        return a - b
 
-def subtract(a, b):
-    """
-    @brief Subtracts second number from first number.
-    @param a First number.
-    @param b Second number.
-    @return Difference between a and b.
-    """
-    return a - b
-
-if __name__ == "__main__":
-    print(add(2, 3))       # Output: 5
-    print(subtract(5, 2))  # Output: 3
+# Example usage of the calculator function
+print(calculator(2, 3, '+'))  # Output: 5
